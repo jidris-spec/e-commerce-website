@@ -1,18 +1,36 @@
 *{
     padding: 0%;
     margin: 0%;
-}
-.body{
-    position:relative;
-}
-.background{
-    object-fit: contain;
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    z-index: -20;
 
 }
+.background-video{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+video {
+    position:fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.background-with-overlay {
+    position: relative;
+    background-image: url('https://vod-progressive.akamaized.net/exp=1691587817~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4093%2F14%2F370467553%2F1536339698.mp4~hmac=684b149bade4a592c782f81729168dc3d590df8966cc469f5cb25121c922ba00/vimeo-prod-skyfire-std-us/01/4093/14/370467553/1536339698.mp4" type="video/mp4"');
+  }
+  
+  .background-with-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0.5, 0.5); 
+  }
+  
 .menu-bar{
     position: absolute;
     inset: 0;
@@ -22,15 +40,20 @@
     width: 100%;
     height: 100px;
 }
-.text{
+.text {
     font-family: sans-serif;
     color: blue;
-    width:100%;
-    transition:width 0.3 ease-in ;
+    width: 100%;
+    animation: blink 1s infinite; /* Applying the "blink" animation */
 }
-.text:hover {
-    width: 50%;
-    color:black;
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    25%, 75% {
+        opacity: 0; /* Invisible */
+    }
 }
 
 .menu-bar ul {
@@ -58,6 +81,75 @@
 
 .active:hover {
     .sub-link{
+        visibility: visible;
+    }
+}
+
+@keyframes dropDown {
+    0% {
+        height:0;
+    }
+    20%{
+        height: 20%;
+    }
+
+    50% {
+        height: 50%;
+    }
+    80% {
+        height: 50%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+.sub-link-2{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    padding: 1rem 2rem;
+    visibility: collapse;
+    animation: dropDown 0.6s ease-in;
+}
+
+.active:hover {
+    .sub-link-2{
+        visibility: visible;
+    }
+}
+
+@keyframes dropDown {
+    0% {
+        height:0;
+    }
+    20%{
+        height: 20%;
+    }
+
+    50% {
+        height: 50%;
+    }
+    80% {
+        height: 50%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.sub-link-3{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    padding: 1rem 2rem;
+    visibility: collapse;
+    animation: dropDown 0.6s ease-in;
+}
+
+.active:hover {
+    .sub-link-3{
         visibility: visible;
     }
 }
