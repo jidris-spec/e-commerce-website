@@ -12,8 +12,8 @@ interested in making a simple site.
 For ecommerce site, webstore front,etc.
 
 ## Documentation
- -- For Developer 
- -- For User
+[For Developer](https://www.github.com/)
+[For User](https://www.github.com/)
  
 ## Contribute
  -- If you are interested in working on any of the work.Please make a  pull request
